@@ -8,7 +8,7 @@ public class HeroMovement : MonoBehaviour
     [SerializeField] private int currentTargetIndex = 0;
     [SerializeField] private Rigidbody rb;
 
-    private Vector3 height = new Vector3(0f, 1.5f, 0f);
+    private Vector3 height = new Vector3(0f, 2f, 0f);
 
     void Awake()
     {
@@ -39,7 +39,7 @@ public class HeroMovement : MonoBehaviour
         Vector3 newPosition = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         rb.MovePosition(newPosition);
 
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(transform.position, targetPosition) < 0.2f)
         {
             currentTargetIndex++;
         }

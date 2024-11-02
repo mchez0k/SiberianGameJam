@@ -1,38 +1,32 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GhostAbilities : MonoBehaviour
 {
-    [SerializeField] private GameObject firstSpellPrefab;
-    [SerializeField] private float firstSpellCooldown;
-    [SerializeField] private float currentFirstSpellCooldown;
-
-
-    [SerializeField] private GameObject secondSpellPrefab;
-    [SerializeField] private float secondSpellCooldown;
-    [SerializeField] private float currentSecondSpellCooldown;
-
     [SerializeField] private Transform handPosition;
+    [SerializeField] private List<Spell> spellPrefabs = new List<Spell>();
+    [SerializeField] private List<Image> spellCooldowns = new List<Image>();
 
-    private void Update()
+    private void Start()
     {
-        DecreaseCooldowns();
-
-        if (Input.GetKeyUp(KeyCode.Z) && currentFirstSpellCooldown <= 0)
+        for (int i = 0; i < spellPrefabs.Count; i++)
         {
-            currentFirstSpellCooldown = firstSpellCooldown;
-            Instantiate(firstSpellPrefab, handPosition.position, Quaternion.identity);
-        }
-
-        if (Input.GetKeyUp(KeyCode.X) && currentSecondSpellCooldown <= 0)
-        {
-            currentSecondSpellCooldown = secondSpellCooldown;
-            Instantiate(secondSpellPrefab, handPosition.position, Quaternion.identity);
+            spellPrefabs[i].SetImage(spellCooldowns[i]);
         }
     }
-
-    private void DecreaseCooldowns()
+    private void Update()
     {
-        currentFirstSpellCooldown -= Time.deltaTime;
-        currentSecondSpellCooldown -= Time.deltaTime;
+        Debug.DrawRay(handPosition.position, Vector3.down * 2f);
+        for (int i = 0; i < spellPrefabs.Count; i++)
+        {
+            spellPrefabs[i].DecreaseCooldown(Time.deltaTime);
+
+            if (Input.GetKeyDown(spellPrefabs[i].GetSpellButton()) && spellPrefabs[i].IsCanSpawn(handPosition.position))
+            {
+                spellPrefabs[i].ResetCooldown();
+                Instantiate(spellPrefabs[i], handPosition.position + spellPrefabs[i].GetSpellOffset(), Quaternion.identity).GetComponent<Spell>().Spawn();
+            }
+        }
     }
 }
