@@ -3,12 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int currentScene;
+    public static GameManager Instance;
+    private static int currentScene;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
 
     private void Update()
     {
@@ -18,14 +28,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadLevel(int levelIndex)
+    public static void LoadLevel(int levelIndex)
     {
         currentScene = levelIndex;
-        BackgroundMusic.Instance.ChangeClip(levelIndex);
+        //BackgroundMusic.Instance.ChangeClip(levelIndex);
         SceneManager.LoadScene(levelIndex);
     }
 
-    public void ExitGame()
+    public static void ExitGame()
     {
         Application.Quit();
     }
