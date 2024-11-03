@@ -4,4 +4,5 @@ public enum EBlockType : byte
     Dirt = 2,
     Grass = 3,
     Stone = 4,
+    Obstacle = 5,
 }

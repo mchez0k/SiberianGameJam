@@ -8,6 +8,7 @@ public class Spell : MonoBehaviour
     [SerializeField] private float lifetime = 10f;
     [SerializeField] private KeyCode spellButton = KeyCode.Z;
     [SerializeField] private float fadeDuration = 1f;
+    [field: SerializeField] public ESpellType SpellType { get; private set; } = ESpellType.Object;
     [field: SerializeField] public bool IsFaded { get; private set; } = false;
     private Image cooldownImage;
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -18,6 +19,7 @@ public class GhostAbilities : MonoBehaviour
         {
             spellPrefabs[i].SetImage(spellCooldowns[i]);
         }
+        gameObject.AddComponent<Spell>();
     }
     private void Update()
     {
@@ -44,31 +46,40 @@ public class GhostAbilities : MonoBehaviour
         {
             spell.DecreaseCooldown(Time.deltaTime);
 
-            if (Input.GetKeyDown(spell.GetSpellButton()) && spell.IsCanSpawn() && currentBlock is not null)
+            if (spell.SpellType == ESpellType.Object) SpawnObjectSpell(spell);
+            if (spell.SpellType == ESpellType.Action) SpawnActionSpell(spell);
+        }
+    }
+    private void SpawnObjectSpell(Spell spell)
+    {
+        if (Input.GetKeyDown(spell.GetSpellButton()) && spell.IsCanSpawn() && currentBlock != null && currentBlock.BlockType != EBlockType.Obstacle)
+        {
+            spell.ResetCooldown();
+            Vector3 spawnDirection;
+
+            if (Mathf.Abs(transform.forward.x) > Mathf.Abs(transform.forward.z))
             {
-                spell.ResetCooldown();
+                spawnDirection = transform.forward.z > 0 ? Vector3.forward : -Vector3.forward;
+            }
+            else
+            {
+                spawnDirection = transform.forward.x > 0 ? Vector3.right : -Vector3.right;
+            }
 
-                Vector3 spawnDirection;
+            Quaternion spawnRotation = Quaternion.LookRotation(spawnDirection);
+            Vector3 spawnPosition = new Vector3(currentBlock.transform.position.x, handPosition.position.y, currentBlock.transform.position.z);
+            Spell instance = Instantiate(spell, spawnPosition, spawnRotation).GetComponent<Spell>();
+            instance.Spawn();
 
-                if (Mathf.Abs(transform.forward.x) > Mathf.Abs(transform.forward.z))
-                {
-                    spawnDirection = transform.forward.z > 0 ? Vector3.forward : -Vector3.forward;
-                }
-                else
-                {
-                    spawnDirection = transform.forward.x > 0 ? Vector3.right : -Vector3.right;
-                }
-
-                Quaternion spawnRotation = Quaternion.LookRotation(spawnDirection);
-                Vector3 spawnPosition = new Vector3(currentBlock.transform.position.x, handPosition.position.y, currentBlock.transform.position.z);
-                Spell instance = Instantiate(spell, spawnPosition, spawnRotation).GetComponent<Spell>();
-                instance.Spawn();
-
-                if (instance.IsFaded)
-                {
-                    OnNewBlockAdded?.Invoke();
-                }
+            if (instance.IsFaded)
+            {
+                OnNewBlockAdded?.Invoke();
             }
         }
+    }
+
+    private void SpawnActionSpell(Spell spell)
+    {
+
     }
 }

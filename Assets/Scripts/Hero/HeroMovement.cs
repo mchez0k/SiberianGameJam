@@ -13,11 +13,10 @@ public class HeroMovement : MonoBehaviour
 
     private Vector3 height = new Vector3(0f, 0.5f, 0f);
 
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
         GeneratePath();
-        //FindObjectOfType<GhostAbilities>().OnNewBlockAdded.AddListener(GeneratePath);
     }
 
     private void GeneratePath()
@@ -34,6 +33,7 @@ public class HeroMovement : MonoBehaviour
             // Получаем всех соседей текущего блока
             foreach (Collider collider in currentBlock.blocks)
             {
+                Debug.Log("Проверка " +  collider.name);
                 Block neighbor = collider.GetComponent<Block>();
                 if (neighbor != null && !path.Contains(neighbor.transform))
                 {
@@ -103,7 +103,7 @@ public class HeroMovement : MonoBehaviour
         }
     }
 
-    private void Restart()
+    public void Restart()
     {
         GeneratePath();
         rb.velocity = Vector3.zero;
