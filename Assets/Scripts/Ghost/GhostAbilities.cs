@@ -22,7 +22,6 @@ public class GhostAbilities : MonoBehaviour
         Debug.DrawRay(handPosition.position, Vector3.down * 2f);
         bool blockHit = Physics.Raycast(handPosition.position, Vector3.down, out RaycastHit rayInfo, 2f);
         Block detectedBlock = blockHit && rayInfo.collider.TryGetComponent(out Block block) ? block : null;
-
         HandleBlockSelection(detectedBlock);
         HandleSpells();
     }
@@ -43,10 +42,10 @@ public class GhostAbilities : MonoBehaviour
         {
             spell.DecreaseCooldown(Time.deltaTime);
 
-            if (Input.GetKeyDown(spell.GetSpellButton()) && spell.IsCanSpawn(handPosition.position))
+            if (Input.GetKeyDown(spell.GetSpellButton()) && spell.IsCanSpawn() && currentBlock is not null)
             {
                 spell.ResetCooldown();
-                Spell instance = Instantiate(spell, handPosition.position + spell.GetSpellOffset(), Quaternion.identity).GetComponent<Spell>();
+                Spell instance = Instantiate(spell, new Vector3(currentBlock.transform.position.x, handPosition.position.y, currentBlock.transform.position.z) + spell.GetSpellOffset(), Quaternion.identity).GetComponent<Spell>();
                 instance.Spawn();
             }
         }

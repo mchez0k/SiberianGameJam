@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellCooldown: 5
+  lifetime: 10
   spellButton: 120
   spellOffset: {x: -1, y: 0, z: 0}
   fadeDuration: 1
@@ -150,5 +151,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.9393654, y: 0.24909973, z: 1.7898164}
-  m_Center: {x: 1.973834, y: 1.6947386, z: -0.018000245}
+  m_Size: {x: 2.9393654, y: 0.42405212, z: 1.7898164}
+  m_Center: {x: 1.973834, y: 1.6072624, z: -0.018000245}

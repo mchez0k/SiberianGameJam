@@ -37,9 +37,9 @@ public class Spell : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    public bool IsCanSpawn(Vector3 handPosition)
+    public bool IsCanSpawn()
     {
-        return currentSpellCooldown <= 0f && Physics.Raycast(handPosition, Vector3.down, 2f);
+        return currentSpellCooldown <= 0f;
     }
 
     public void DecreaseCooldown(float time)
