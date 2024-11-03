@@ -7,9 +7,8 @@ public class Spell : MonoBehaviour
     [SerializeField] private float spellCooldown;
     [SerializeField] private float lifetime = 10f;
     [SerializeField] private KeyCode spellButton = KeyCode.Z;
-    [SerializeField] private Vector3 spellOffset;
     [SerializeField] private float fadeDuration = 1f;
-    [SerializeField] private bool isFaded = false;
+    [field: SerializeField] public bool IsFaded { get; private set; } = false;
     private Image cooldownImage;
 
     private float currentSpellCooldown;
@@ -30,7 +29,7 @@ public class Spell : MonoBehaviour
 
     public void Spawn()
     {
-        if (isFaded)
+        if (IsFaded)
         {
             StartCoroutine(ChangeOpacity());
         }
@@ -55,7 +54,7 @@ public class Spell : MonoBehaviour
     private IEnumerator ChangeOpacity()
     {
         float currentTime = 0f;
-        var material = GetComponent<MeshRenderer>().material;
+        var material = GetComponentInChildren<MeshRenderer>().material;
 
         Color initialColor = material.color;
         initialColor.a = 0f;
@@ -90,5 +89,4 @@ public class Spell : MonoBehaviour
     }
 
     public KeyCode GetSpellButton() => spellButton;
-    public Vector3 GetSpellOffset() => spellOffset;
 }

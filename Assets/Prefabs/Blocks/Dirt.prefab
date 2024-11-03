@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5061581920945984141}
   - component: {fileID: 6357442764940103025}
   - component: {fileID: 4640110442667826023}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <BlockType>k__BackingField: 2
+  blocks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   selectEmissionColor: {r: 1, g: 1, b: 1, a: 1}
   emissionIntensity: 0.3
 --- !u!1001 &3490527653190236783
@@ -165,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1fe5ec4480059994c8af0a999f059c50, type: 3}
       propertyPath: m_Name
       value: dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe5ec4480059994c8af0a999f059c50, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

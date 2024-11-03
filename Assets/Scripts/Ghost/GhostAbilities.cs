@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class GhostAbilities : MonoBehaviour
@@ -7,6 +8,7 @@ public class GhostAbilities : MonoBehaviour
     [SerializeField] private Transform handPosition;
     [SerializeField] private List<Spell> spellPrefabs = new List<Spell>();
     [SerializeField] private List<Image> spellCooldowns = new List<Image>();
+    public UnityEvent OnNewBlockAdded;
 
     private Block currentBlock;
 
@@ -45,8 +47,27 @@ public class GhostAbilities : MonoBehaviour
             if (Input.GetKeyDown(spell.GetSpellButton()) && spell.IsCanSpawn() && currentBlock is not null)
             {
                 spell.ResetCooldown();
-                Spell instance = Instantiate(spell, new Vector3(currentBlock.transform.position.x, handPosition.position.y, currentBlock.transform.position.z) + spell.GetSpellOffset(), Quaternion.identity).GetComponent<Spell>();
+
+                Vector3 spawnDirection;
+
+                if (Mathf.Abs(transform.forward.x) > Mathf.Abs(transform.forward.z))
+                {
+                    spawnDirection = transform.forward.z > 0 ? Vector3.forward : -Vector3.forward;
+                }
+                else
+                {
+                    spawnDirection = transform.forward.x > 0 ? Vector3.right : -Vector3.right;
+                }
+
+                Quaternion spawnRotation = Quaternion.LookRotation(spawnDirection);
+                Vector3 spawnPosition = new Vector3(currentBlock.transform.position.x, handPosition.position.y, currentBlock.transform.position.z);
+                Spell instance = Instantiate(spell, spawnPosition, spawnRotation).GetComponent<Spell>();
                 instance.Spawn();
+
+                if (instance.IsFaded)
+                {
+                    OnNewBlockAdded?.Invoke();
+                }
             }
         }
     }

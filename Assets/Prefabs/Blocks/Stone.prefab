@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5754335796446105328}
   - component: {fileID: 4531395935461422698}
   - component: {fileID: 6779240026987707486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,6 +68,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <BlockType>k__BackingField: 4
+  blocks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   selectEmissionColor: {r: 1, g: 1, b: 1, a: 1}
   emissionIntensity: 0.3
 --- !u!1001 &4452052017834095698
@@ -137,6 +142,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1353aadad03f6144da0fc16235bbd599, type: 3}
       propertyPath: m_Name
       value: stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1353aadad03f6144da0fc16235bbd599, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
