@@ -5,17 +5,20 @@ public class BackgroundMusic : MonoBehaviour
 {
     public static BackgroundMusic Instance;
 
-    //[SerializeField] private float volume;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<AudioClip> audioClips;
 
+    [field: SerializeField] public float Volume { get; private set; } = 1.0f;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         if (Instance == null)
         {
             Instance = this;
-        } else
+            DontDestroyOnLoad(gameObject);
+            audioSource.volume = Volume;
+        }
+        else
         {
             Destroy(gameObject);
         }
@@ -28,12 +31,16 @@ public class BackgroundMusic : MonoBehaviour
 
     public void ChangeClip(int index)
     {
-        audioSource.clip = audioClips[index];
+        if (index >= 0 && index < audioClips.Count)
+        {
+            audioSource.clip = audioClips[index];
+            audioSource.Play(); // Запуск музыки после смены клипа
+        }
     }
 
-    public void OnVolumeChanged(float volume)
+    public void OnVolumeChanged(float newVolume)
     {
-        //this.volume = volume;
-        audioSource.volume = volume;
+        Volume = newVolume;
+        audioSource.volume = Volume;
     }
 }
