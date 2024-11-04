@@ -1854,7 +1854,7 @@ PrefabInstance:
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: -1845853618328613792, guid: 05cd56025a68d2e4e92365020a46f65c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.data[0]
       value: 

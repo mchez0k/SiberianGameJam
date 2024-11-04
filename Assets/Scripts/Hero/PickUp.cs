@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
 {
     public int crystalsCollected = 0;
     public int crystalsToCollect = 3;
+    public AudioSource AudioSource;
 
 
 
@@ -16,7 +17,7 @@ public class PickUp : MonoBehaviour
         {
             crystalsCollected++;
             Debug.Log("Crystal collected! Total: " + crystalsCollected);
-
+            AudioSource.Play();
             Destroy(other.gameObject);
 
             //if (crystalsCollected >= crystalsToCollect)   -- еcли у игрока 3 кристала то загрузится сцена которая в кавычках в лоад сцене 
