@@ -22,10 +22,10 @@ public class HeroMovement : MonoBehaviour
         GeneratePath();
     }
 
-    private void GeneratePath(Transform current = null)
+    private void GeneratePath()
     {
         path.Clear();
-        if (current == null) current = startPoint;
+        var current = startPoint;
 
         while (current != endPoint)
         {
@@ -97,10 +97,15 @@ public class HeroMovement : MonoBehaviour
         Vector3 newPosition = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         rb.MovePosition(newPosition);
 
-        if (Vector3.Distance(transform.position, targetPosition) < 0.25f)
+        if (CheckPosition(transform.position, targetPosition))
         {
             currentTargetIndex++;
         }
+    }
+
+    private bool CheckPosition(Vector3 heroPos, Vector3 targetPos)
+    {
+        return Mathf.Abs(heroPos.x - targetPos.x) < 0.3f && Mathf.Abs(heroPos.z - targetPos.z) < 0.3f;
     }
 
     public void Scream()
