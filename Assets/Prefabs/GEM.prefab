@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.94
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.338
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.4078307
+      value: 5.797
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
       propertyPath: m_Name
       value: GEM
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
+      propertyPath: m_TagString
+      value: Crystal
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5754084199372789682, guid: 35978f5fe20b084419f0584d52fc5b46, type: 3}
