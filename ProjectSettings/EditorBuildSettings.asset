@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: eff23e46cc2aeb04dab9b5cb066fb37e
   - enabled: 1
+    path: Assets/Scenes/introCut.unity
+    guid: 7618eaa70649f5f408b35d797419756c
+  - enabled: 1
     path: Assets/Scenes/LevelDesign/Level0.unity
     guid: ae8eb4a95ebe94eaa9f18756cbc2aaf9
   - enabled: 1
