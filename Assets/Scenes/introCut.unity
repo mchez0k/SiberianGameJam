@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (11)
@@ -228,6 +232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (13)
@@ -409,6 +417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (18)
@@ -430,6 +442,7 @@ GameObject:
   - component: {fileID: 218430517}
   - component: {fileID: 218430516}
   - component: {fileID: 218430515}
+  - component: {fileID: 218430519}
   m_Layer: 0
   m_Name: Camera (6)
   m_TagString: Untagged
@@ -475,7 +488,7 @@ Camera:
   m_GameObject: {fileID: 218430514}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -532,6 +545,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!45 &218430519
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218430514}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &311224130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -580,6 +602,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (20)
@@ -601,6 +627,7 @@ GameObject:
   - component: {fileID: 385927751}
   - component: {fileID: 385927750}
   - component: {fileID: 385927749}
+  - component: {fileID: 385927753}
   m_Layer: 0
   m_Name: Camera (5)
   m_TagString: Untagged
@@ -646,7 +673,7 @@ Camera:
   m_GameObject: {fileID: 385927748}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -703,6 +730,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.334, y: 143.938, z: -7.144}
+--- !u!45 &385927753
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385927748}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &429040478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -851,6 +887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (10)
@@ -1135,6 +1175,7 @@ GameObject:
   - component: {fileID: 770420312}
   - component: {fileID: 770420311}
   - component: {fileID: 770420310}
+  - component: {fileID: 770420313}
   m_Layer: 0
   m_Name: Camera (1)
   m_TagString: Untagged
@@ -1159,7 +1200,7 @@ Camera:
   m_GameObject: {fileID: 770420309}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1216,6 +1257,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -46.777, z: 0}
+--- !u!45 &770420313
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770420309}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &805877269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1264,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (19)
@@ -1321,6 +1375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (8)
@@ -1330,6 +1388,134 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+--- !u!1 &885652051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885652053}
+  - component: {fileID: 885652052}
+  m_Layer: 0
+  m_Name: ghost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!82 &885652052
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885652051}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bc78b8e9c9ca9c846b8b540daec2db87, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1.3
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &885652053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885652051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.28508464, y: 0.75141126, z: 14.64814}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &962518797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1447,6 +1633,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (17)
@@ -1504,6 +1694,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (15)
@@ -1678,6 +1872,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc042cde07f29304d89cf72f2bd18d17, type: 3}
+--- !u!1 &1139614481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139614483}
+  - component: {fileID: 1139614482}
+  m_Layer: 0
+  m_Name: cutscenetolevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1139614482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139614481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1a9b89526b4694ca4e4bbe08ee56f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1139614483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139614481}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.094018, y: 1.5013653, z: -2.9308417}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1217501666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1726,6 +1964,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (22)
@@ -1783,6 +2025,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (16)
@@ -1840,6 +2086,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (7)
@@ -1929,6 +2179,12 @@ PlayableDirector:
     value: {fileID: 218430515}
   - key: {fileID: 830420734743874261, guid: 38045882956d8dc499e89dc98d1b4fe1, type: 2}
     value: {fileID: 385927748}
+  - key: {fileID: -323644577103815961, guid: 38045882956d8dc499e89dc98d1b4fe1, type: 2}
+    value: {fileID: 885652051}
+  - key: {fileID: 5412790734793257425, guid: 38045882956d8dc499e89dc98d1b4fe1, type: 2}
+    value: {fileID: 1139614481}
+  - key: {fileID: -2852887708507610774, guid: 38045882956d8dc499e89dc98d1b4fe1, type: 2}
+    value: {fileID: 1139614481}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1253145374
@@ -2079,6 +2335,7 @@ GameObject:
   - component: {fileID: 1301534586}
   - component: {fileID: 1301534585}
   - component: {fileID: 1301534584}
+  - component: {fileID: 1301534587}
   m_Layer: 0
   m_Name: Camera (2)
   m_TagString: Untagged
@@ -2103,7 +2360,7 @@ Camera:
   m_GameObject: {fileID: 1301534583}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2160,6 +2417,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.334, y: -45.773, z: -7.144}
+--- !u!45 &1301534587
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301534583}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &1336146264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2172,6 +2438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 3029031497503697110, guid: c95750f60ee3c9e4391eda7091d61bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa0da6dc162fcfa4cb86c9b6b079cab5, type: 2}
     - target: {fileID: 5754335796446105328, guid: c95750f60ee3c9e4391eda7091d61bbb, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.894686
@@ -2220,6 +2490,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6779240026987707486, guid: c95750f60ee3c9e4391eda7091d61bbb, type: 3}
+      propertyPath: selectEmissionColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779240026987707486, guid: c95750f60ee3c9e4391eda7091d61bbb, type: 3}
+      propertyPath: selectEmissionColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779240026987707486, guid: c95750f60ee3c9e4391eda7091d61bbb, type: 3}
+      propertyPath: selectEmissionColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2237,6 +2519,7 @@ GameObject:
   - component: {fileID: 1348408762}
   - component: {fileID: 1348408761}
   - component: {fileID: 1348408760}
+  - component: {fileID: 1348408764}
   m_Layer: 0
   m_Name: Camera (4)
   m_TagString: Untagged
@@ -2282,7 +2565,7 @@ Camera:
   m_GameObject: {fileID: 1348408759}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2339,6 +2622,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.334, y: -87.796, z: -7.144}
+--- !u!45 &1348408764
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348408759}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1 &1368842097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2643,7 @@ GameObject:
   - component: {fileID: 1368842100}
   - component: {fileID: 1368842099}
   - component: {fileID: 1368842098}
+  - component: {fileID: 1368842102}
   m_Layer: 0
   m_Name: Camera (3)
   m_TagString: Untagged
@@ -2396,7 +2689,7 @@ Camera:
   m_GameObject: {fileID: 1368842097}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2453,6 +2746,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.334, y: -180, z: -7.144}
+--- !u!45 &1368842102
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368842097}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &1406293362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2501,6 +2803,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (14)
@@ -2558,6 +2864,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (12)
@@ -2930,6 +3240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (21)
@@ -2976,6 +3290,7 @@ GameObject:
   - component: {fileID: 1581401170}
   - component: {fileID: 1581401169}
   - component: {fileID: 1581401168}
+  - component: {fileID: 1581401171}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3000,7 +3315,7 @@ Camera:
   m_GameObject: {fileID: 1581401167}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3057,6 +3372,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 29.814, y: -78.949, z: 0}
+--- !u!45 &1581401171
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581401167}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d564d2abe53e730419c3e60cf718d982, type: 2}
 --- !u!1001 &1586371277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3203,7 +3527,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.38349944, g: 0.38552278, b: 0.5849056, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3213,8 +3537,8 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
+    m_Strength: 0.964
+    m_Bias: 0.5
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -3537,6 +3861,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6708020211448165073, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbed629d76075041b470ff18399132f, type: 2}
     - target: {fileID: 7253705699650510750, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_Name
       value: Grass (9)
@@ -3590,4 +3918,6 @@ SceneRoots:
   - {fileID: 739508398}
   - {fileID: 174875937}
   - {fileID: 578452765}
+  - {fileID: 885652053}
   - {fileID: 1586371277}
+  - {fileID: 1139614483}
