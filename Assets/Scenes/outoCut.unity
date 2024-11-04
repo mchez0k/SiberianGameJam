@@ -2557,7 +2557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce13674b99f156449aa17ba43eb37e22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c21071d73d6fb95458b40ca8ec5a2465, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2869,13 +2869,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 163
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123
+  m_Text: "\u0411\u0443! \u0418\u0441\u043F\u0443\u0433\u0430\u043B\u0441\u044F?
+    \n\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0438\u0433\u0440\u0443,
+    \u0434\u0440\u0443\u0433!"
 --- !u!222 &1638527174
 CanvasRenderer:
   m_ObjectHideFlags: 0
