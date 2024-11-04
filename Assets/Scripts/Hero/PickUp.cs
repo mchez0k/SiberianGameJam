@@ -8,6 +8,8 @@ public class PickUp : MonoBehaviour
     public int crystalsCollected = 0;
     public int crystalsToCollect = 3;
 
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Crystal"))
