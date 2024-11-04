@@ -86,6 +86,7 @@ public class HeroMovement : MonoBehaviour
     }
 
     private void FixedUpdate()
+
     {
         if (rb.velocity.magnitude < 1f)
         {
@@ -94,19 +95,33 @@ public class HeroMovement : MonoBehaviour
 
         if (currentTargetIndex < path.Count)
         {
-            if (currentTargetIndex % stepsToPause == 0 && currentTargetIndex > 0 && path[currentTargetIndex].GetComponent<Block>().BlockType != EBlockType.Abyss)
-            {
-                speed = stopSpeed;
-            } else
-            {
-                speed = defaultSpeed;
-            }
             MoveToTarget();
         }
         else
         {
             GameManager.LoadLevel();
         }
+
+        //if (rb.velocity.magnitude < 1f)
+        //{
+        //    rb.AddForce(Vector3.up * 100f, ForceMode.Force);
+        //}
+
+        //if (currentTargetIndex < path.Count)
+        //{
+        //    if (currentTargetIndex % stepsToPause == 0 && currentTargetIndex > 0 && path[currentTargetIndex].GetComponent<Block>().BlockType != EBlockType.Abyss)
+        //    {
+        //        speed = stopSpeed;
+        //    } else
+        //    {
+        //        speed = defaultSpeed;
+        //    }
+        //    MoveToTarget();
+        //}
+        //else
+        //{
+        //    GameManager.LoadLevel();
+        //}
     }
 
 

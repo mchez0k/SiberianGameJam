@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 7391248737042154465}
   - component: {fileID: 3890254595811676929}
   - component: {fileID: 8403857956550715895}
+  - component: {fileID: 7968440898615582289}
   m_Layer: 8
   m_Name: Hero
   m_TagString: Hero
@@ -502,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   rotationSpeed: 5
+  stepsToPause: 4
   path:
   - {fileID: 0}
   - {fileID: 0}
@@ -526,6 +528,8 @@ MonoBehaviour:
   rb: {fileID: 7391248737042154465}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
+  nameText: {fileID: 0}
+  descriptionText: {fileID: 0}
 --- !u!54 &7391248737042154465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -597,6 +601,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7968440898615582289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096641465784223878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9227a25562af2b4439d89f36e00ba433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalsCollected: 3
+  crystalsToCollect: 3
 --- !u!1 &6836196828729794606
 GameObject:
   m_ObjectHideFlags: 0
