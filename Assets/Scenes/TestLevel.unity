@@ -1221,6 +1221,9 @@ MonoBehaviour:
   spellCooldowns:
   - {fileID: 1404061884}
   - {fileID: 305251881}
+  OnNewBlockAdded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &862250760
 PrefabInstance:
   m_ObjectHideFlags: 0
