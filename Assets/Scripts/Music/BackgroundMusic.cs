@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BackgroundMusic : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class BackgroundMusic : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<AudioClip> audioClips;
+    public static UnityEvent OnVolumeChangedEvent = new UnityEvent();
 
     [field: SerializeField] public float Volume { get; private set; } = 1.0f;
 
@@ -34,7 +36,7 @@ public class BackgroundMusic : MonoBehaviour
         if (index >= 0 && index < audioClips.Count)
         {
             audioSource.clip = audioClips[index];
-            audioSource.Play(); // Запуск музыки после смены клипа
+            audioSource.Play();
         }
     }
 

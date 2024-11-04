@@ -9,7 +9,15 @@ public class PickUp : MonoBehaviour
     public int crystalsToCollect = 3;
     public AudioSource AudioSource;
 
+    private void Start()
+    {
+        BackgroundMusic.OnVolumeChangedEvent.AddListener(OnVolumeChanged);
+    }
 
+    private void OnVolumeChanged()
+    {
+        AudioSource.volume = BackgroundMusic.Instance.Volume;
+    }
 
     void OnTriggerEnter(Collider other)
     {
