@@ -9,7 +9,6 @@ public class Spell : MonoBehaviour
     [SerializeField] private KeyCode spellButton = KeyCode.Z;
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private float distance = 1f;
-    [SerializeField] private AudioSource audioSource;
 
     [field: SerializeField] public ESpellType SpellType { get; private set; } = ESpellType.Object;
     [field: SerializeField] public bool IsFaded { get; private set; } = false;
@@ -19,8 +18,6 @@ public class Spell : MonoBehaviour
 
     private void Awake()
     {
-        audioSource = GetComponentInChildren<AudioSource>();
-        audioSource.volume = BackgroundMusic.Instance.Volume;
         currentSpellCooldown = spellCooldown;
         if (cooldownImage != null)
         {

@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickUp : MonoBehaviour
 {
@@ -7,15 +10,6 @@ public class PickUp : MonoBehaviour
     public AudioSource AudioSource;
 
 
-    private void Start()
-    {
-        BackgroundMusic.OnVolumeChangedEvent.AddListener(OnVolumeChanged);
-    }
-
-    private void OnVolumeChanged()
-    {
-        AudioSource.volume = BackgroundMusic.Instance.Volume;
-    }
 
     void OnTriggerEnter(Collider other)
     {
