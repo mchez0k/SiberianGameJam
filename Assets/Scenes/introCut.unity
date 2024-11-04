@@ -4184,6 +4184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725993994}
   - component: {fileID: 1725993993}
+  - component: {fileID: 1725993995}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -4268,6 +4269,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1725993995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725993992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c02ce867e827af46b62ddd75055e4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mAudioSources:
+  - {fileID: 955298601}
+  - {fileID: 910518997}
+  - {fileID: 578452764}
+  - {fileID: 885652052}
+  - {fileID: 191550268}
 --- !u!1001 &1729700879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4607,14 +4626,14 @@ SceneRoots:
   - {fileID: 1269976956}
   - {fileID: 1106381034}
   - {fileID: 739508398}
-  - {fileID: 174875937}
-  - {fileID: 578452765}
-  - {fileID: 885652053}
   - {fileID: 1586371277}
   - {fileID: 1139614483}
   - {fileID: 650603078}
+  - {fileID: 174875937}
   - {fileID: 145602029}
   - {fileID: 1547884853}
   - {fileID: 955298602}
   - {fileID: 910518998}
+  - {fileID: 578452765}
+  - {fileID: 885652053}
   - {fileID: 191550269}

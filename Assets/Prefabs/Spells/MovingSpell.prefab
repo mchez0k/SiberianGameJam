@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35d83464ae121043a4271a947114ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellCooldown: 3
+  spellCooldown: 2
   lifetime: 10
   spellButton: 122
   fadeDuration: 1
   distance: 1
+  audioSource: {fileID: 0}
   <SpellType>k__BackingField: 2
   <IsFaded>k__BackingField: 0
 --- !u!135 &8482311679130187456
