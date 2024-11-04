@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Cutsceneexit : MonoBehaviour
+public class ExtOutGame : MonoBehaviour
 {
     void OnEnable()
 
     {
-        GameManager.LoadLevel(2);
+        GameManager.LoadLevel(0);
     }
 }
