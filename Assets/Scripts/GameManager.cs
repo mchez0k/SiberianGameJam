@@ -28,8 +28,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void LoadLevel(int levelIndex)
+    public static void LoadLevel(int levelIndex = -1)
     {
+        if (levelIndex == -1)
+        {
+            SceneManager.LoadScene(++currentScene);
+            return;
+        }
         currentScene = levelIndex;
         //BackgroundMusic.Instance.ChangeClip(levelIndex);
         SceneManager.LoadScene(levelIndex);

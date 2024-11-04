@@ -502,7 +502,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   rotationSpeed: 5
-  path: []
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   models:
   - {fileID: 3552305537602123660}
   - {fileID: 6836196828729794606}
@@ -1012,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5547947038600276124, guid: c9a66327fa87cc141a3873f174333db2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5195048882033904264, guid: c9a66327fa87cc141a3873f174333db2, type: 3}
       propertyPath: m_Layer

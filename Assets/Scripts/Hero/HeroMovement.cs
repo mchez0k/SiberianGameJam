@@ -70,7 +70,7 @@ public class HeroMovement : MonoBehaviour
         {
             MoveToTarget();
         } else {
-            Restart();
+            GameManager.LoadLevel();
         }
     }
 
