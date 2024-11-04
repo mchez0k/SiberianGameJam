@@ -6,6 +6,8 @@ public class HeroMovement : MonoBehaviour
     [SerializeField] private float speed = 1.0f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private List<Transform> path;
+    [SerializeField] private GameObject[] models;
+    private GameObject currentModel;
     [SerializeField] private int currentTargetIndex = 0;
     [SerializeField] private Rigidbody rb;
     [SerializeField] public Transform startPoint;
@@ -15,14 +17,15 @@ public class HeroMovement : MonoBehaviour
 
     void Start()
     {
+        currentModel = models[0];
         rb = GetComponent<Rigidbody>();
         GeneratePath();
     }
 
-    private void GeneratePath()
+    private void GeneratePath(Transform current = null)
     {
         path.Clear();
-        Transform current = startPoint;
+        if (current == null) current = startPoint;
 
         while (current != endPoint)
         {
@@ -30,7 +33,6 @@ public class HeroMovement : MonoBehaviour
             Block currentBlock = current.GetComponent<Block>();
             List<Transform> neighbors = new List<Transform>();
 
-            // Получаем всех соседей текущего блока
             foreach (Collider collider in currentBlock.blocks)
             {
                 Debug.Log("Проверка " +  collider.name);
@@ -43,12 +45,10 @@ public class HeroMovement : MonoBehaviour
 
             if (neighbors.Count > 0)
             {
-                // Выбираем случайного соседа
                 current = neighbors[Random.Range(0, neighbors.Count)];
             }
             else
             {
-                Debug.LogWarning("Тупик достигнут; путь не может продолжаться.");
                 break;
             }
         }
@@ -59,7 +59,7 @@ public class HeroMovement : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Путь до конечной точки не найден. Генерируем новый маршрут");
+            Debug.LogWarning("Generating a new path");
             GeneratePath();
         }
     }
@@ -103,9 +103,17 @@ public class HeroMovement : MonoBehaviour
         }
     }
 
+    public void Scream()
+    {
+
+    }
+
     public void Restart()
     {
         GeneratePath();
+        currentModel.SetActive(false);
+        currentModel = models[Random.Range(0, models.Length)];
+        currentModel.SetActive(true);
         rb.velocity = Vector3.zero;
         transform.position = path[0].position + height;
         transform.rotation = Quaternion.identity;
