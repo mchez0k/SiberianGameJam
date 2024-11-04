@@ -1,10 +1,17 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HeroMovement : MonoBehaviour
 {
+    public static HeroMovement Instance;
     [SerializeField] private float speed = 1.0f;
+    private float defaultSpeed;
+    private float stopSpeed;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private int stepsToPause = 4;
+
     [SerializeField] private List<Transform> path;
     [SerializeField] private GameObject[] models;
     private GameObject currentModel;
@@ -13,19 +20,34 @@ public class HeroMovement : MonoBehaviour
     [SerializeField] public Transform startPoint;
     [SerializeField] public Transform endPoint;
 
+    [SerializeField] public TextMeshProUGUI nameText;
+    [SerializeField] public TextMeshProUGUI descriptionText;
+
     private Vector3 height = new Vector3(0f, 0.5f, 0f);
 
-    void Start()
+    private void Start()
     {
+        Instance = this;
+        defaultSpeed = speed;
+        stopSpeed = speed / 5f;
         currentModel = models[0];
         rb = GetComponent<Rigidbody>();
+        nameText.text = Random.Range(0, 100).ToString();
+        descriptionText.text = Random.Range(0, 100).ToString();
         GeneratePath();
     }
 
-    private void GeneratePath()
+    private void GeneratePath(Transform startPoint = null)
     {
         path.Clear();
-        var current = startPoint;
+        Transform current;
+        if (startPoint == null)
+        {
+            current = this.startPoint;
+        } else
+        {
+            current = startPoint;
+        }
 
         while (current != endPoint)
         {
@@ -59,20 +81,34 @@ public class HeroMovement : MonoBehaviour
         else
         {
             Debug.LogWarning("Generating a new path");
-            GeneratePath();
+            GeneratePath(startPoint);
         }
     }
 
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude < 1f) rb.AddForce(Vector3.up * 100f, ForceMode.Force);
+        if (rb.velocity.magnitude < 1f)
+        {
+            rb.AddForce(Vector3.up * 100f, ForceMode.Force);
+        }
+
         if (currentTargetIndex < path.Count)
         {
+            if (currentTargetIndex % stepsToPause == 0 && currentTargetIndex > 0 && path[currentTargetIndex].GetComponent<Block>().BlockType != EBlockType.Abyss)
+            {
+                speed = stopSpeed;
+            } else
+            {
+                speed = defaultSpeed;
+            }
             MoveToTarget();
-        } else {
+        }
+        else
+        {
             GameManager.LoadLevel();
         }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -109,12 +145,15 @@ public class HeroMovement : MonoBehaviour
 
     public void Scream()
     {
-
+        GeneratePath(path[currentTargetIndex]);
     }
 
     public void Restart()
     {
         GeneratePath();
+        nameText.text = Random.Range(0, 100).ToString();
+        descriptionText.text = Random.Range(0, 100).ToString();
+
         currentModel.SetActive(false);
         currentModel = models[Random.Range(0, models.Length)];
         currentModel.SetActive(true);

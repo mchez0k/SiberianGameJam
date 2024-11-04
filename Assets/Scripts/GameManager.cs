@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         currentScene = levelIndex;
-        //BackgroundMusic.Instance.ChangeClip(levelIndex);
         SceneManager.LoadScene(levelIndex);
     }
 

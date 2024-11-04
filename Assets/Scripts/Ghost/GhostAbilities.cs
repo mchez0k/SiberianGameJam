@@ -80,19 +80,31 @@ public class GhostAbilities : MonoBehaviour
 
     private void SpawnActionSpell(Spell spell)
     {
-        if (Input.GetKeyDown(spell.GetSpellButton()) && currentBlock.BlockType == EBlockType.Obstacle)
+        if (Input.GetKeyDown(spell.GetSpellButton()) && currentBlock != null)
         {
             Vector3 pushDirection;
-
-            if (Mathf.Abs(transform.forward.x) > Mathf.Abs(transform.forward.z))
+            if (currentBlock.BlockType != EBlockType.Obstacle)
             {
-                pushDirection = transform.forward.x > 0 ? Vector3.right : -Vector3.right;
+                HeroMovement.Instance.Scream();
             }
             else
             {
-                pushDirection = transform.forward.z > 0 ? Vector3.forward : -Vector3.forward;
+                pushDirection = GetPushDir(transform.forward);
+                StartCoroutine(MoveOverTime(currentBlock.transform, pushDirection));
             }
-            StartCoroutine(MoveOverTime(currentBlock.transform, pushDirection));
+
+        }
+    }
+
+    private Vector3 GetPushDir(Vector3 dir)
+    {
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.z))
+        {
+            return dir.x > 0 ? Vector3.right : -Vector3.right;
+        }
+        else
+        {
+            return dir.z > 0 ? Vector3.forward : -Vector3.forward;
         }
     }
 

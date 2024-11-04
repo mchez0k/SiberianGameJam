@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8482311679130187456}
   - component: {fileID: 1212849147287514263}
   m_Layer: 0
-  m_Name: MovingSpell
+  m_Name: ScreamSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellCooldown: 3
   lifetime: 10
-  spellButton: 122
+  spellButton: 99
   fadeDuration: 1
   distance: 1
   <SpellType>k__BackingField: 2
