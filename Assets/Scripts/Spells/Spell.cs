@@ -20,7 +20,10 @@ public class Spell : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponentInChildren<AudioSource>();
-        audioSource.volume = BackgroundMusic.Instance.Volume;
+        if (audioSource != null )
+        {
+            audioSource.volume = BackgroundMusic.Instance.Volume;
+        }
         currentSpellCooldown = spellCooldown;
         if (cooldownImage != null)
         {
