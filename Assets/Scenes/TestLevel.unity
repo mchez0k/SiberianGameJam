@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1244677322858660858, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: 5.98
       objectReference: {fileID: 0}
     - target: {fileID: 1244677322858660858, guid: 9ced4e594daf507409bffd477a54e15d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1221,6 +1221,9 @@ MonoBehaviour:
   spellCooldowns:
   - {fileID: 1404061884}
   - {fileID: 305251881}
+  OnNewBlockAdded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &862250760
 PrefabInstance:
   m_ObjectHideFlags: 0
