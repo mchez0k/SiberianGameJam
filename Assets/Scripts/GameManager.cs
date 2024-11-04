@@ -19,12 +19,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    private void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Escape) && currentScene != 0) FindAnyObjectByType<Settings>().Open();
-    }
-
     public static void LoadLevel(int levelIndex = -1)
     {
         if (levelIndex == -1)

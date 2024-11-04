@@ -9,6 +9,7 @@ public class GhostAbilities : MonoBehaviour
     [SerializeField] private Transform handPosition;
     [SerializeField] private List<Spell> spellPrefabs = new List<Spell>();
     [SerializeField] private List<Image> spellCooldowns = new List<Image>();
+    [SerializeField] private Settings settings;
     public UnityEvent OnNewBlockAdded;
 
     private Block currentBlock;
@@ -23,6 +24,7 @@ public class GhostAbilities : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) settings.Open();
         Debug.DrawRay(handPosition.position, Vector3.down * 2f);
         bool blockHit = Physics.Raycast(handPosition.position, Vector3.down, out RaycastHit rayInfo, 2f);
         Block detectedBlock = blockHit && rayInfo.collider.TryGetComponent(out Block block) ? block : null;

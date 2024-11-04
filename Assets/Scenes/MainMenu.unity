@@ -2973,6 +2973,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1040696771681294341, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040696771681294341, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195792721244255641, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195792721244255641, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195792721244255641, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4952162933997847069, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2988,6 +3008,10 @@ PrefabInstance:
     - target: {fileID: 7529902742945373311, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529902742945373311, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7940321796446553395, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_Pivot.x
