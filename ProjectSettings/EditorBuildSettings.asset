@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelDesign/Level1.unity
     guid: 9bbaf4f43e4ff4ad3a163c978c7ad021
   - enabled: 1
-    path: Assets/Scenes/LevelDesign/Level2.unity
-    guid: 2fcdd5d71c27d4dfe957c2b61b3236bc
-  - enabled: 1
     path: Assets/Scenes/outoCut.unity
     guid: 06fb545220234ba42a09568559239268
+  - enabled: 0
+    path: Assets/Scenes/LevelDesign/Level2.unity
+    guid: 2fcdd5d71c27d4dfe957c2b61b3236bc
   m_configObjects: {}
