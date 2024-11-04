@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -79,6 +80,36 @@ public class GhostAbilities : MonoBehaviour
 
     private void SpawnActionSpell(Spell spell)
     {
+        if (Input.GetKeyDown(spell.GetSpellButton()) && currentBlock.BlockType == EBlockType.Obstacle)
+        {
+            Vector3 pushDirection;
 
+            if (Mathf.Abs(transform.forward.x) > Mathf.Abs(transform.forward.z))
+            {
+                pushDirection = transform.forward.x > 0 ? Vector3.right : -Vector3.right;
+            }
+            else
+            {
+                pushDirection = transform.forward.z > 0 ? Vector3.forward : -Vector3.forward;
+            }
+            StartCoroutine(MoveOverTime(currentBlock.transform, pushDirection));
+        }
+    }
+
+    private IEnumerator MoveOverTime(Transform block, Vector3 direction)
+    {
+        Vector3 startPosition = block.position;
+        Vector3 targetPosition = startPosition + direction * 1f;
+        float elapsedTime = 0;
+        float totalTime = 1.0f;
+
+        while (elapsedTime < totalTime)
+        {
+            block.position = Vector3.Lerp(startPosition, targetPosition, (elapsedTime / totalTime));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        block.position = targetPosition;
     }
 }

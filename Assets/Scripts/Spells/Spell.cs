@@ -8,6 +8,8 @@ public class Spell : MonoBehaviour
     [SerializeField] private float lifetime = 10f;
     [SerializeField] private KeyCode spellButton = KeyCode.Z;
     [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private float distance = 1f;
+
     [field: SerializeField] public ESpellType SpellType { get; private set; } = ESpellType.Object;
     [field: SerializeField] public bool IsFaded { get; private set; } = false;
     private Image cooldownImage;
@@ -35,6 +37,28 @@ public class Spell : MonoBehaviour
             StartCoroutine(ChangeOpacity());
         }
         Destroy(gameObject, lifetime);
+    }
+
+    public void MoveObstacle(Transform block, Vector3 direction)
+    {
+        StartCoroutine(MoveOverTime(block, direction));
+    }
+
+    private IEnumerator MoveOverTime(Transform block, Vector3 direction)
+    {
+        Vector3 startPosition = block.position;
+        Vector3 targetPosition = startPosition + direction * distance;
+        float elapsedTime = 0;
+        float totalTime = 1.0f;
+
+        while (elapsedTime < totalTime)
+        {
+            block.position = Vector3.Lerp(startPosition, targetPosition, (elapsedTime / totalTime));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        block.position = targetPosition;
     }
 
     public bool IsCanSpawn()

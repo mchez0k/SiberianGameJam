@@ -35,7 +35,6 @@ public class HeroMovement : MonoBehaviour
 
             foreach (Collider collider in currentBlock.blocks)
             {
-                Debug.Log("Проверка " +  collider.name);
                 Block neighbor = collider.GetComponent<Block>();
                 if (neighbor != null && !path.Contains(neighbor.transform))
                 {

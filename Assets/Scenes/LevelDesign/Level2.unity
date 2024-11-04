@@ -8096,6 +8096,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2130367598038234864, guid: b66aa645ce3f3344084a46ac17fb6542, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552305537602123660, guid: b66aa645ce3f3344084a46ac17fb6542, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5096641465784223878, guid: b66aa645ce3f3344084a46ac17fb6542, type: 3}
       propertyPath: m_Name
       value: Hero

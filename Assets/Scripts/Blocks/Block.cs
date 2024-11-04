@@ -36,7 +36,7 @@ public class Block : MonoBehaviour
         {
             Block block = collider.GetComponent<Block>();
 
-            if (collider.gameObject == gameObject || block == null) continue;
+            if (collider.gameObject == gameObject || block == null || block.BlockType == EBlockType.Obstacle) continue;
 
             filteredBlocks.Add(collider);
         }
