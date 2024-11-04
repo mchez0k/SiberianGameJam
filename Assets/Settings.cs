@@ -21,10 +21,12 @@ public class Settings : MonoBehaviour
         if (isOpened)
         {
             gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
             isOpened = false;
 
         } else
         {
+            Cursor.lockState = CursorLockMode.None;
             gameObject.SetActive(true);
             isOpened = true;
         }
@@ -32,11 +34,13 @@ public class Settings : MonoBehaviour
 
     public void Close()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
     }
 
     private void Exit()
     {
+        Cursor.lockState = CursorLockMode.None;
         GameManager.LoadLevel(0);
     }
 }

@@ -43,6 +43,7 @@ public class BackgroundMusic : MonoBehaviour
     public void OnVolumeChanged(float newVolume)
     {
         Volume = newVolume;
+        OnVolumeChangedEvent?.Invoke();
         audioSource.volume = Volume;
     }
 }

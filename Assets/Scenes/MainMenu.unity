@@ -3037,6 +3037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 148438518502640720, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 223272130885570185, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3127,11 +3131,11 @@ PrefabInstance:
       objectReference: {fileID: 1645589775}
     - target: {fileID: 2373236333808971044, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2373236333808971044, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2418922002214208190, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3139,15 +3143,15 @@ PrefabInstance:
       objectReference: {fileID: 782256074}
     - target: {fileID: 6598636398447574097, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6598636398447574097, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598636398447574097, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1604925961143777328, guid: b530ec50f22bb95439c004cb0d3ce11a, type: 3}

@@ -23,8 +23,10 @@ public class GameManager : MonoBehaviour
         if (levelIndex == -1)
         {
             SceneManager.LoadScene(++currentScene);
+            Cursor.lockState = CursorLockMode.None;
             return;
         }
+        Cursor.lockState = CursorLockMode.Locked;
         currentScene = levelIndex;
         SceneManager.LoadScene(levelIndex);
     }
