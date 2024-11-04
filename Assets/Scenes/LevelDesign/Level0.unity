@@ -2102,7 +2102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellPrefabs.Array.data[2]
@@ -2111,11 +2111,11 @@ PrefabInstance:
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.data[0]
       value: 
-      objectReference: {fileID: 5744409077955317384}
+      objectReference: {fileID: 1404061884}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.data[1]
       value: 
-      objectReference: {fileID: 1404061884}
+      objectReference: {fileID: 305251881}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.data[2]
       value: 
@@ -2453,17 +2453,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f145fa1980a149542b391f3900c3e1d2, type: 3}
---- !u!114 &5744409077955317384 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5170082048154380998, guid: f145fa1980a149542b391f3900c3e1d2, type: 3}
-  m_PrefabInstance: {fileID: 5744409077955317383}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5744409077955317385 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1932217824663010421, guid: f145fa1980a149542b391f3900c3e1d2, type: 3}
