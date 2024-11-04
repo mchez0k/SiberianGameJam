@@ -25,7 +25,7 @@ public class Block : MonoBehaviour
 
     private void CalculateBlocks()
     {
-        BlocksCleaning(Physics.OverlapSphere(transform.position, 0.75f, LayerMask.GetMask("Block")));
+        BlocksCleaning(Physics.OverlapSphere(transform.position, 0.6f, LayerMask.GetMask("Block")));
     }
 
     private void BlocksCleaning(Collider[] detectedBlocks)

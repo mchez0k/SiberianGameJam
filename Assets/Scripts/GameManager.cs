@@ -18,16 +18,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && currentScene != 0)
-        {
-            LoadLevel(0);
-        }
-    }
-
     public static void LoadLevel(int levelIndex = -1)
     {
         if (levelIndex == -1)
