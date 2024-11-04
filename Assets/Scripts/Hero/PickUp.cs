@@ -8,6 +8,8 @@ public class PickUp : MonoBehaviour
     public int crystalsCollected = 0;
     public int crystalsToCollect = 3;
 
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Crystal"))
@@ -17,7 +19,7 @@ public class PickUp : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            //if (crystalsCollected >= crystalsToCollect)
+            //if (crystalsCollected >= crystalsToCollect)   -- еcли у игрока 3 кристала то загрузится сцена которая в кавычках в лоад сцене 
             //{
             //    Debug.Log("All crystals collected! Loading next scene...");
             //    SceneManager.LoadScene("NextSceneName");
