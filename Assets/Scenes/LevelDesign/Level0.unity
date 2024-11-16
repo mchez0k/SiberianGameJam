@@ -595,6 +595,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4145646686058287378, guid: 1354e4c0d8c71024eba90876c2988981, type: 3}
   m_PrefabInstance: {fileID: 1570651899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &585057196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4328247011777877178, guid: 37edc611126af7544a5c38928befbf2a, type: 3}
+  m_PrefabInstance: {fileID: 988505777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &585057201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585057196}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 1, z: 0.7}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &591239815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,10 +1105,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8940392597468142323, guid: 37edc611126af7544a5c38928befbf2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4328247011777877178, guid: 37edc611126af7544a5c38928befbf2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585057201}
   m_SourcePrefab: {fileID: 100100000, guid: 37edc611126af7544a5c38928befbf2a, type: 3}
 --- !u!1001 &1274225674
 PrefabInstance:
@@ -2098,7 +2128,7 @@ PrefabInstance:
       objectReference: {fileID: 1285503818}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellPrefabs.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4714629052168850383, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
       propertyPath: spellCooldowns.Array.size
@@ -2120,6 +2150,10 @@ PrefabInstance:
       propertyPath: spellCooldowns.Array.data[2]
       value: 
       objectReference: {fileID: 305251881}
+    - target: {fileID: 8652015339851271930, guid: 3d730c5337644d2499ebaa2c89cdb5c5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

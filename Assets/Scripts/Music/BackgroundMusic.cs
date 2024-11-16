@@ -24,6 +24,7 @@ public class BackgroundMusic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        PlayMusic();
     }
 
     public void PlayMusic()
